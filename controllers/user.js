@@ -2,11 +2,15 @@ const { response, request } = require("express");
 
 const userGet = (req = request, res = response) => {
 
-  const params = req.query;
+  const {q, nombre = 'No Name', apikey = '12313131', page = 1, limit} = req.query
 
   res.json({
     msg: "get API Controller",
-    query
+    q,
+    nombre,
+    apikey,
+    page,
+    limit
   });
 };
 
