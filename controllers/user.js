@@ -1,6 +1,6 @@
-const { response } = require("express");
+const { response, request } = require("express");
 
-const userGet = (req, res = response) => {
+const userGet = (req = request, res = response) => {
 
   const params = req.query;
 
